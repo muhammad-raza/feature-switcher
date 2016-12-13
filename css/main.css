@@ -1,4 +1,78 @@
 html {
-	height: 200px;
+	height: 400px;
 	width: 400px;
+	background: #eee;
+}
+
+li {
+	list-style: none;
+}
+
+ul.list__experiments {
+	padding: 0;
+	margin: 0;	
+}
+
+.small {
+	font-size: 10px;
+	color: #999;
+}
+
+li.list__experiments-item {
+	position: relative;
+	background: #fff;
+	padding: 10px;
+	margin: 10px 0;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-box-shadow: 3px 3px 10px 0px rgba(102,97,102,0.5);
+	-moz-box-shadow: 3px 3px 10px 0px rgba(102,97,102,0.5);
+	box-shadow: 3px 3px 10px 0px rgba(102,97,102,0.5);
+}
+
+.experiments-item__drop-down-image {
+	right: 18px;
+    top: 18px;
+	height: 16px;
+	width: 16px;
+	position: absolute;
+	transform: rotate( 0deg );            
+    -moz-transform: rotate( 0deg );            
+    -ms-transform: rotate( 0deg );            
+    -o-transform: rotate( 0deg );            
+    -webkit-transform:rotate( 0deg );            
+    transition: transform 200ms ease;
+    -moz-transition: -moz-transform 200ms ease;
+    -ms-transition: -ms-transform 200ms ease;
+    -o-transition: -o-transform 200ms ease;
+    -webkit-transition: -webkit-transform 200ms ease;
+}
+
+ul.experiments-item__list__variant {
+	padding: 0 12px;
+	max-height: 0;
+    transition: max-height 0.15s ease-out;
+    overflow: scroll;
+}
+li.list__experiments-item.show ul.experiments-item__list__variant {
+	max-height: 200px;		
+    transition: max-height 0.25s ease-in;
+}	
+
+li.list__experiments-item.show .experiments-item__drop-down-image {
+	transform: rotate( 180deg );            
+    -moz-transform: rotate( 180deg );            
+    -ms-transform: rotate( 180deg );            
+    -o-transform: rotate( 180deg );            
+    -webkit-transform:rotate( 180deg );            
+    transition: transform 200ms ease;
+    -moz-transition: -moz-transform 200ms ease;
+    -ms-transition: -ms-transform 200ms ease;
+    -o-transition: -o-transform 200ms ease;
+    -webkit-transition: -webkit-transform 200ms ease;
+}
+
+li.list__variant-item {
+	padding: 5px 5px 5px 12px;
 }

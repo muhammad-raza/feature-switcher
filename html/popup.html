@@ -6,18 +6,34 @@
 	<script src="../js/config.js"></script>
 	<script src="../js/contentScript.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
-	<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css">
 
 </head>
 <body>
 <div class="container">
-	<ul class="js-tests-list">
-		<!-- <li class="row">
-			<div class="col-xs-8">Aray</div>		
-			<div class="col-xs-2"><div class=" btn btn-default">A</div></div>
-		<div class="col-xs-2 text-center">B</div>
-	</li> -->
-	</ul>
+	<div class="experiments-list-container">
+		<ul class="list__experiments js-tests-list">
+			<li class="list__experiments-item js-test-item">	
+				<div>attentionGrabberColourTest</div>		
+				<div class="small">Change the colour of attention grabber on full page advert</div>	
+				<img class="experiments-item__drop-down-image" src="../images/arrow.svg" />
+
+			<ul class="experiments-item__list__variant">
+				<li class="list__variant-item">	
+					<input type="radio" name="awain">
+					<span>attentionGrabberColourTest</span>							
+					<div class="small">Change the colour of attention grabber on full page advert</div>							
+				</li>
+
+				<li class="list__variant-item">	
+					<input type="radio" name="awain">
+					<span>attentionGrabberColourTest</span>							
+					<div class="small">Change the colour of attention grabber on full page advert</div>		
+				</li>
+			</li>
+
+		
+		</ul>
+	</div>
 </div>
 </body>
 </html>
