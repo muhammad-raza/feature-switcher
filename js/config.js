@@ -4,7 +4,7 @@ require.config({
         jquery: "../bower_components/jquery/dist/jquery",
         underscore:"../bower_components/underscore/underscore",
         backbone:"../bower_components/backbone/backbone",
-        bootstrap:"../bower_components/bootstrap/dist/js/bootstrap"
+        localStorage: "../bower_components/backbone.localstorage/backbone.localStorage"
     },
     shim: {
     	jquery: {
@@ -13,6 +13,9 @@ require.config({
     	underscore: {
     		exports: '_'
     	},
+        localStorage: {
+            exports: 'Storage'
+        },
     	backbone: {
     		exports: 'Backbone',
     		deps: ['jquery', 'underscore']

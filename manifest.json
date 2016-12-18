@@ -16,6 +16,9 @@
   },
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "permissions": [
-    "http://*.autotrader.co.uk"    
+    "cookies",
+    "tabs",
+    "http://www.autotrader.co.uk/",
+    "http://www.mocky.io/v2/*"
   ]
 }

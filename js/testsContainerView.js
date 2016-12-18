@@ -1,5 +1,5 @@
-define(['jquery', 'underscore', 'backbone', 'js/testsData', 'js/testItem'], function($, _, Backbone, TestsData, TestItem){
-
+define(['jquery', 'underscore', 'backbone', 'js/testItemView', 'js/testsList'], function($, _, Backbone, TestItem, TestsList){
+    var testsList = new TestsList;
 	var TestsContainer = Backbone.View.extend({
         el: $('.js-tests-list'),
 
@@ -8,7 +8,11 @@ define(['jquery', 'underscore', 'backbone', 'js/testsData', 'js/testItem'], func
         },
 
         initialize: function() {
-            this.tests = TestsData.getData().tests;            
+            // this.listenTo(testsList, 'add', this.render);
+            // testsList.fetch();
+            // this.listenTo(TestsList, 'reset', this.render);
+            // this.listenTo(TestsList, 'all', this.render);
+            // this.tests = TestsData.getData().tests;            
             this.testItem = new TestItem();            
         },
 
@@ -21,9 +25,10 @@ define(['jquery', 'underscore', 'backbone', 'js/testsData', 'js/testItem'], func
         },
 
         render: function () {
-            for (var test in this.tests) {
+            console.log('rendering')
+            // for (var test in this.tests) {
                 // $(this.el).html(this.testItem.render({testName: test}).el);
-            }
+            // }
             // this.$el.html('raza');
         }
 	});

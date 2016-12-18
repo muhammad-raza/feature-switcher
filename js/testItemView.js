@@ -8,7 +8,6 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone){
         },
 
         render: function(item) {
-          console.log(this.$el)
             // this.$el.html(this.template(item));
             return this;
         }
